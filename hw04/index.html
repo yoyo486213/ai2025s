@@ -154,7 +154,9 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      本次作業是接觸文生圖的初步應用，使用的是目前提供個人使用功能最齊全的文生圖工具ComfyUI，
+      透過節點式的方式連接模塊，構建工作流並執行產生圖象，過程有趣且也能透過該過程理解模型運作
+      流程，最後根據主題成功生成芙莉蓮的相關圖像。
     </div>
   </div>
 
@@ -170,22 +172,22 @@
         </tr>
         <tr>
           <td rowspan="4" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>4</td>
-          <td>Simple baseline - 描述</td>
+          <td>Simple baseline - 完成ComfyUI建置</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>4</td>
-          <td>Medium baseline - 描述</td>
+          <td>Medium baseline - 完成芙莉蓮文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>2</td>
-          <td>Strong baseline - 描述</td>
+          <td>Strong baseline - 替換模型完成辛梅爾文生圖</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox4"></td>
           <td id='m4'>-10</td>
           <td>沒有寫100字心得</td>
         </tr>
@@ -195,18 +197,60 @@
   </div>
 
   <!-- ------------------------------------------------>
-  <div class="row hw12 bottomrow">
-    <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <figure>
+        <figcaption>ComfyUI+工作流</figcaption>
+            <img src="ComfyUI.png" width="100%"/>
+        </figure>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty"> 
+      <figure>
+        <figcaption>完成芙莉蓮Checkpoint、LoRA文生圖</figcaption>
+        <a href="https://civitai.com/api/download/models/1337429?type=Model&format=SafeTensor&size=full&fp=fp16">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/api/download/models/435570?type=Model&format=SafeTensor&size=full&fp=bf16">LoRA連結</a>
+        <p>1344 * 768</p>
+        <p>LoRA Strength : 1.0</p>
+        <p>Positive：masterpiece, best quality, high score, great score, absurdres, illustration, 1girl, solo, frieren, sousou no frieren, long white hair, pointy ears, elf, green eyes, flying in the sky, facing viewer, holding glowing magic staff, casting spell, blue light beam, magical aura, blue flowers blooming on the ground below, petals flying, dramatic lighting, cinematic, glowing, soft breeze, long sleeves, upper body, striped shirt, floating, &gt;lora:loras2:1&gt;,
+
+        </p>
+        <p>Negative：lowres, bad anatomy, bad hands, text, error, missing finger, extra digits, fewer digits, cropped, worst quality, low quality, low score, bad score, average score, signature, watermark, username, blurry
+        </p>
+        <img src="img1.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
 
   <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">    
+      <figure>
+        <figcaption>替換Ckeckpoint、LoRA完成辛梅爾文生圖</figcaption>
+        <a href="https://civitai.com/models/820208/obsession-illustrious-xl">Checkpoint連結</a>
+        <br>
+        <a href="https://civitai.com/models/1204563?modelVersionId=1356500">LoRA連結1</a>
+        <br>
+        <a href="https://civitai.com/models/1201355/r754496-or-shiiros-styles-or-niji">LoRA連結2</a>
+        <p>1024 * 1280</p>
+        <p>LoRA1 Strength : 0.5</p>
+        <p>LoRA2 Strength : 0.45</p>
+        <p>masterpiece, best quality, high detail, anime screencap, frieren, himmel (sousou no frieren), 1boy, 1girl, proposal scene, kneeling man, standing woman, holding hands, putting ring on finger, emotional moment, eye contact, field background, fantasy setting, full body, facing each other, light blue hair, green eyes, white long hair, pointy ears, original outfit, cape, robe, striped shirt, realistic face, detailed hands, soft lighting, dramatic pose, &gt;lora:loras2:1&gt;,
+          ,
+        </p>
+        <p>nsfw, wedding dress, bridal gown, veil, bad hands, extra fingers, fused fingers, mutated hands, missing hands, bad anatomy, lowres, blurry, jpeg artifacts, distorted face, bad face, deformed, signature, watermark, text
 
+        </p>
+        <img src="img2.png" width="100%"/>
+      </figure>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------>
 
 <script>
   $(function() {
